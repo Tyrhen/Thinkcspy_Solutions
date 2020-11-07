@@ -1,4 +1,6 @@
+
 """Select Chapter 8 Problems from How to Think Like a Computer Scientist"""
+
 import string
 #p2
 def prefix_suffix_modify():
@@ -61,6 +63,7 @@ def letter_text_analyzer(text,letter):
 def times_table_6x6(x):
     """displays a times table for numbers up to 12"""
     assert x > 12 == False, 'The highest value of input is 12'
+
     layout =""
     index = 0
     while x>index:
@@ -105,12 +108,18 @@ def string_palidrome(word):
 
 
 #P11
+
+def string_substring_count(word,letter,index=0):
+
 def string_substring_count(word,letter,):
+
     """counts the number of occurences of a substring in a string using the
         Find string method. Works exactly like thecount_letters_mod fuction
         I made"""
     count = 0
+
     index = 0
+
     while index < len(word):
         result = word.find(letter,index)
         if result != -1:
@@ -123,12 +132,19 @@ def string_substring_count(word,letter,):
 
 #P12
 def string_substring_removal_first(string,substring):
+
     """ remove only the first instance of a substring in a string"""
+
     result = string.replace(substring,'',1)
     return result
 
 #P13
 def string_substring_removal_all(string,substring):
+
+    result = string.replace(substring,'')
+    return result
+    
+
     """ remove all instances of a substring from a string"""
     result = string.replace(substring,'')
     return result
@@ -202,5 +218,6 @@ def test_suite():
     test(string_substring_removal_all('mississippi','iss')=='mippi')   
 
 test_suite()
+
 
 
